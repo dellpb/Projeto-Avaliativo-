@@ -1,0 +1,91 @@
+:root {
+  --azul: #b5eb1f;
+  --azul-escuro: #148f43;
+  --fundo: #faf8f4;
+  --texto: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  padding: 28px 32px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.3rem;
+  margin: 0 0 24px;
+  color: var(--azul-escuro);
+}
+
+.linha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.campo {
+  width: 90px;
+  height: 60px;
+  font-size: 1.4rem;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.campo:focus {
+  outline: none;
+  border-color: var(--azul);
+}
+
+.resultado {
+  width: 100px;
+  height: 60px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--azul);
+  border-radius: 8px;
+  background: #eaf1ff;
+  color: var(--azul-escuro);
+  font-weight: 700;
+}
+
+.simbolo {
+  font-size: 1.6rem;
+  color: #555;
+}
+
+/* remove as setinhas do input number (visual mais limpo) */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
